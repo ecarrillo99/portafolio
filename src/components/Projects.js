@@ -43,7 +43,7 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Proyectos</h2>
                 <p>A continuación te detallo algunos de los proyectos en los que he colaborado.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Tab.Container id="projects-tabs" defaultActiveKey="first" >
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Móvil</Nav.Link>
@@ -57,7 +57,7 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row >
                         {
                           mobileProjects.map((project, index) => {
                             return (
