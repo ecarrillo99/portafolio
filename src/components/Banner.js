@@ -56,7 +56,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn text-center text-sm-start" : ""}>
+              <div className={isVisible ? "animate__animated animate__fadeIn text-center" : "text-center text-sm-start"}>
                 <span className="tagline ">Bienvenidos a mi portafolio</span>
                 <h1 className="texto-encabezado">{`Hola! Soy Edisson`} </h1>
                 <h1 className="texto-encabezado"><span className="txt-rotate texto-encabezado" dataPeriod="1000" data-rotate='[ "Desarrollador", "Full Stack en proceso"]'><span className="wrap">{text}</span></span></h1>
@@ -69,7 +69,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={ isVisible ? "animate__animated animate__zoomIn text-center" : ""}>
+                <div className={ isVisible ? "animate__animated animate__zoomIn text-center" : "text-center text-sm-start"}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
