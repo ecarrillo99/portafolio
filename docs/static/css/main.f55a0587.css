@@ -13,19 +13,19 @@ code {
 @font-face {
     font-family: Centra;
     font-weight: 700;
-    src: url(/portafolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf)
+    src: url(/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf)
 }
 
 @font-face {
     font-family: Centra;
     font-weight: 500;
-    src: url(/portafolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf)
+    src: url(/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf)
 }
 
 @font-face {
     font-family: Centra;
     font-weight: 400;
-    src: url(/portafolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf)
+    src: url(static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf)
 }
 
 * {
