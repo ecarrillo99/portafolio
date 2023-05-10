@@ -26,18 +26,18 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:3000/portafolio/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
-    setButtonText("Send");
+    setButtonText("Enviado");
     let result = await response.json();
     setFormDetails(formInitialDetails);
     if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
+      setStatus({ succes: true, message: 'Mensaje enviado correctamente'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
     }
