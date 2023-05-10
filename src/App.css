@@ -297,8 +297,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 @keyframes updown {
     0% {
@@ -563,7 +563,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -639,4 +640,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+.footer .social-icon{
+  padding-right: 35px;
 }
