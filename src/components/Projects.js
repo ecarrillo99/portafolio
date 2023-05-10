@@ -27,7 +27,7 @@ export const Projects = () => {
 
   const othersProjects = [
     {
-      title: "Weareable para Smart Home",
+      title: "Wearable para Smart Home",
       description: "Dispositivo wearable con reconocimiento de gestos para el control de dispositivos Smart Home. Desarrollado con librerias para ML en Python y Hexiwear como pataforma de hardware.",
       imgUrl: Hexiwear,
     },
@@ -35,7 +35,7 @@ export const Projects = () => {
 
   return (
     <section className="project" id="project">
-      <Container>
+      <Container >
         <Row>
           <Col size={12}>
             <TrackVisibility>
@@ -55,9 +55,9 @@ export const Projects = () => {
                       <Nav.Link eventKey="third">Otros</Nav.Link>
                     </Nav.Item>
                   </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp " : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row >
+                      <Row  className="justify-content-center align-items-center">
                         {
                           mobileProjects.map((project, index) => {
                             return (
@@ -71,7 +71,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                    <Row>
+                    <Row className="justify-content-center align-items-center">
                         {
                           webProjects.map((project, index) => {
                             return (
@@ -85,7 +85,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                    <Row>
+                    <Row className="justify-content-center align-items-center">
                         {
                           othersProjects.map((project, index) => {
                             return (
