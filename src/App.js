@@ -17,6 +17,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <script src="server.js"></script>
     </div>
   );
 }

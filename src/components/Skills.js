@@ -36,6 +36,9 @@ export const Skills = () => {
     }
   };
 
+  const speed=3000;
+  const autoplay=true;
+
   return (
     <section className="skill" id="skills">
         <div className="container">
@@ -45,7 +48,7 @@ export const Skills = () => {
                         <h2>Habilidades</h2>
                         <p>Te invito a conocer algunas de mis habilidades,<br></br> todos los días aprendo algo nuevo.</p>
                         <h3 className="skills-topic-first">Lenguajes de Programación</h3>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel autoPlay={autoplay} autoPlaySpeed={speed} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={percent80} alt="Image" />
                                 <h5>C#</h5>
@@ -60,7 +63,7 @@ export const Skills = () => {
                             </div>
                         </Carousel>
                         <h3 className="skills-topic">Bases de Datos</h3>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel autoPlay={autoplay} autoPlaySpeed={speed} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={percent70} alt="Image" />
                                 <h5>MySQL</h5>
@@ -87,7 +90,7 @@ export const Skills = () => {
                             </div>
                         </Carousel>
                         <h3 className="skills-topic">Otras tecnologías</h3>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel autoPlay={autoplay} autoPlaySpeed={speed} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={percent60} alt="Image" />
                                 <h5>Flutter</h5>
@@ -106,7 +109,7 @@ export const Skills = () => {
                             </div>
                         </Carousel>
                         <h3 className="skills-topic">Ciencia de Datos</h3>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel autoPlay={autoplay} autoPlaySpeed={speed}  responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={percent70} alt="Image" />
                                 <h5>Power BI</h5>
