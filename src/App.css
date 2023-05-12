@@ -262,7 +262,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 767px) {
   .navbar-collapse{
-    background-color: black;
+    background-color: #121212;
     
   }
 
