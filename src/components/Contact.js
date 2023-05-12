@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import {useForm, ValidationError} from '@formspree/react'
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -23,7 +24,7 @@ export const Contact = () => {
       })
   }
 
-  const handleSubmit = async (e) => {
+  /*const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
     let response = await fetch("http://localhost:5000/contact", {
@@ -41,7 +42,9 @@ export const Contact = () => {
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
     }
-  };
+  };**/
+
+  const [state, handleSubmit] = useForm("mqkojpnj");
 
   return (
     <section className="contact" id="connect">
@@ -75,7 +78,7 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} className="px-1 text-center">
                       <textarea rows="6" value={formDetails.message} placeholder="Mensaje" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <button  type="submit"><span>{buttonText}</span></button>
+                      <button  type="submit" disabled={state.submitting}><span>{buttonText}</span></button>
                     </Col>
                     {
                       status.message &&

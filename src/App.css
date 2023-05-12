@@ -99,6 +99,12 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+
+nav.navbar-toggler[aria-expanded="true"] {
+  padding: 0px 0;
+  background-color: #121212;
+}
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
@@ -253,6 +259,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 767px) {
+  .navbar-collapse{
+    background-color: black;
+    
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-text{
+    text-align: center;
+  }
+
+  .navbar .navbar-collapse .navbar-text {
+    padding-left: 20%;
+  }
+  .navbar-text button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    margin-left: 18px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+}
+
 
 @media (min-width:768px) {
   .banner {
