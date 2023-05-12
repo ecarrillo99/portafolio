@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import {useForm, ValidationError} from '@formspree/react'
+import emailjs from '@emailjs/browser'
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -15,6 +15,7 @@ export const Contact = () => {
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Enviar');
+  const [buttonDisabled, setButtonDisabled] = useState(false);
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -44,7 +45,23 @@ export const Contact = () => {
     }
   };**/
 
-  const [state, handleSubmit] = useForm("mqkojpnj");
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setButtonDisabled(true);
+    setButtonText("Enviando...");
+    emailjs.sendForm('service_whc29k9', 'template_tvnpp2w', form.current, 'EV6oGPV_iQn6Irbsa')
+      .then((result) => {
+          setButtonText("Enviado");
+          setFormDetails(formInitialDetails);
+          setStatus({ succes: true, message: 'Mensaje enviado correctamente.'});
+          setButtonDisabled(false);
+      }, (error) => {
+        setStatus({ succes: false, message: 'Ha ocurrido un error. Por favor, intente más tarde.'});
+        setButtonDisabled(false);
+      });
+  };
+
 
   return (
     <section className="contact" id="connect">
@@ -62,30 +79,29 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2 className="text-center">Contáctame</h2>
-                <form onSubmit={handleSubmit}>
+                <form  ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="Nombres" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                      <input required type="text" name= "name" value={formDetails.firstName} placeholder="Nombres" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Apellidos" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input required type="text" name= "lastName" value={formDetails.lastName} placeholder="Apellidos" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Correo" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                      <input required type="email" name= "email" value={formDetails.email} placeholder="Correo" onChange={(e) => onFormUpdate('email', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Teléfono" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                      <input required type="tel" name= "tel" value={formDetails.phone} placeholder="Teléfono" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                     </Col>
                     <Col size={12} className="px-1 text-center">
-                      <textarea rows="6" value={formDetails.message} placeholder="Mensaje" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <button  type="submit" disabled={state.submitting}><span>{buttonText}</span></button>
-                    </Col>
-                    {
+                      <textarea required rows="6"  name= "message" value={formDetails.message} placeholder="Mensaje" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                      {
                       status.message &&
-                      <Col>
                         <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
+                      }
+                      <button  type="submit" disabled={buttonDisabled}  ><span>{buttonText}</span></button>
+                    </Col>
+                    
                   </Row>
                 </form>
               </div>}

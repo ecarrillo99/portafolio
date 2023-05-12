@@ -17,7 +17,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-      <script src="server.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
     </div>
   );
 }

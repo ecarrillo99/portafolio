@@ -16,6 +16,7 @@ export const Banner = () => {
   const toRotate = [ "<Desarrollador/>", "Ingeniero en TI"];
   const period = 500;
 
+
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
