@@ -13,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "<Desarrollador/>", "Ingeniero en TI"];
+  const toRotate = [ "<Desarrollador/>", "<Ingeniero en TI/>"];
   const period = 500;
 
 
@@ -61,8 +61,8 @@ export const Banner = () => {
                 <span className="tagline ">Bienvenidos a mi portafolio</span>
                 <h1 className="texto-encabezado">{`Hola! Soy Edisson`} </h1>
                 <h1 className="texto-encabezado"><span className="txt-rotate texto-encabezado" dataPeriod="1000" data-rotate='[ "Desarrollador", "Full Stack en proceso"]'><span className="wrap">{text}</span></span></h1>
-                {/*<h1 className="texto-encabezado text-center text-sm-start">Hola! Soy Edisson <br/>&lt;Desarrollador/&gt; </h1>*/}
-                <p >Hola!. Soy Edisson, un programador Junior con experiencia en el desarrollo de aplicaciones móviles con ganas de aprender mucho más y convertirme en Full-Stack Developer.</p>
+                {/*<h1 className="texto-encabezado text-center text-sm-start">Hola! me llamo Edisson <br/>&lt;Desarrollador/&gt; </h1>*/}
+                <p >Un desarrollador Junior con experiencia en el desarrollo de aplicaciones móviles, con ganas de aprender mucho más y convertirme en Full-Stack Developer.</p>
                       {/*<button onClick={window.location.href = "#connect"}>Contáctame <ArrowRightCircle size={25} /></button>*/}
               </div>}
             </TrackVisibility>
