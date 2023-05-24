@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portafolio/static/css/main.ee3ab9af.css",
+    "main.css": "/portafolio/static/css/main.02083a80.css",
     "main.js": "/portafolio/static/js/main.29c6f37b.js",
     "static/js/787.fb771931.chunk.js": "/portafolio/static/js/787.fb771931.chunk.js",
     "static/media/happyfruitweb.png": "/portafolio/static/media/happyfruitweb.0a307436ece9c3af08cc.png",
@@ -36,12 +36,12 @@
     "static/media/arrow2.svg": "/portafolio/static/media/arrow2.3d9522b6fd8f2464b7200ebf2c1bb09a.svg",
     "static/media/arrow1.svg": "/portafolio/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "/portafolio/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.ee3ab9af.css.map": "/portafolio/static/css/main.ee3ab9af.css.map",
+    "main.02083a80.css.map": "/portafolio/static/css/main.02083a80.css.map",
     "main.29c6f37b.js.map": "/portafolio/static/js/main.29c6f37b.js.map",
     "787.fb771931.chunk.js.map": "/portafolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee3ab9af.css",
+    "static/css/main.02083a80.css",
     "static/js/main.29c6f37b.js"
   ]
 }
